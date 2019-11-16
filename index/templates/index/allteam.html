@@ -23,7 +23,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{% static 'index/css/agency.css' %}" rel="stylesheet">
     <link href="{% static 'index/css/team.css' %}" rel="stylesheet">
@@ -48,6 +48,34 @@
             background-color: red;
             color: blue;
         }
+        @media only screen and (max-device-width : 600px){
+            #a,#b,#c,#d,#e{
+            padding:5vw 0;
+            border-radius:100%;
+            margin:8vw 3vw 6vw 0;
+            }
+            .fas, .fab{
+                font-size: 8vw;;
+            }
+            #AllTeamMembers{
+                padding-bottom: 2vw;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            #a,#b,#c,#d,#e{
+            padding:4vw 0;
+            border-radius:100%;
+            margin:8vw 2vw 6vw 0;
+            }
+            .fas, .fab{
+                font-size: 3vw;;
+            }
+            .toolbar{
+                margin: 0 15vw 0 15vw;;
+            }
+        }
+        
     </style>
     <script>
         function myFunction1() {
@@ -60,6 +88,7 @@
             document.getElementById("b").style.backgroundColor = "#fec810";
             document.getElementById("c").style.backgroundColor = "#fec810";
             document.getElementById("d").style.backgroundColor = "#fec810";
+            document.getElementById("e").style.backgroundColor = "#fec810";
 
         }
 
@@ -73,7 +102,7 @@
             document.getElementById("b").style.backgroundColor = "lightyellow";
             document.getElementById("c").style.backgroundColor = "#fec810";
             document.getElementById("d").style.backgroundColor = "#fec810";
-
+            document.getElementById("e").style.backgroundColor = "#fec810";
         }
 
         function myFunction3() {
@@ -86,7 +115,7 @@
             document.getElementById("b").style.backgroundColor = "#fec810";
             document.getElementById("c").style.backgroundColor = "lightyellow";
             document.getElementById("d").style.backgroundColor = "#fec810";
-
+            document.getElementById("e").style.backgroundColor = "#fec810";
         }
 
         function myFunction4() {
@@ -99,6 +128,7 @@
             document.getElementById("b").style.backgroundColor = "#fec810";
             document.getElementById("c").style.backgroundColor = "#fec810";
             document.getElementById("d").style.backgroundColor = "lightyellow";
+            document.getElementById("e").style.backgroundColor = "#fec810";
         }
 
         function myFunction5() {
@@ -110,7 +140,8 @@
             document.getElementById("a").style.backgroundColor = "#fec810";
             document.getElementById("b").style.backgroundColor = "#fec810";
             document.getElementById("c").style.backgroundColor = "#fec810";
-            document.getElementById("d").style.backgroundColor = "lightyellow";
+            document.getElementById("d").style.backgroundColor = "#fec810";
+            document.getElementById("e").style.backgroundColor = "lightyellow";
         }
     </script>
 
@@ -149,6 +180,9 @@
                         <a class="nav-link js-scroll-trigger" href="/#team">Team</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/baja">SAE Baja</a>
+                </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/#contact">Contact Us</a>
                     </li>
                 </ul>
@@ -157,22 +191,25 @@
     </nav>
 
 
-    <section id="AllTeamMembers">
+    <section id="AllTeamMembers" style="">
+
+        <div class="toolbar" >
+            <div class="container">
+                <div class="row">
+                <a class="btn btn-primary btn-md col" onclick="myFunction1()" id="a" ><i class="fas fa-tasks "></i></a>
+                <a class="btn btn-primary btn-md col" onclick="myFunction2()" id="b"><i class="fas fa-cogs "></i></a>
+                <a class="btn btn-primary btn-md col" onclick="myFunction3()" id="c"><i class="fab fa-chrome"></i></a>
+                <a class="btn btn-primary btn-md col" onclick="myFunction4()" id="d"><i class="fas fa-pen-nib"></i></a>
+                <a class="btn btn-primary btn-md col" onclick="myFunction5()" id="e" style="margin-right:0"><i class="fas fa-car"></i></a>
+
+            </div>
+            </div>
+
+        </div>
         <div class="container">
 
             <!--  <div class="btn-toolbar" role="group" aria-label="Basic example" > -->
-            <div class="btn-toolbar">
-
-                <a class="btn btn-primary btn-md" onclick="myFunction1()" id="a" class="btn" style="padding: 20px; margin:20px;  ">MANAGEMENT</a>
-
-
-                <a class="btn btn-primary btn-md" onclick="myFunction2()" id="b" style="padding: 20px; margin:20px;">TECHNICAL</a>
-
-                <a class="btn btn-primary btn-md" onclick="myFunction3()" id="c" style="padding: 20px; margin:20px;">WEB DEVELOPMENT</a>
-                <a class="btn btn-primary btn-md" onclick="myFunction4()" id="d" style="padding: 20px; margin:20px;">GRAPHICS DESIGN</a>
-                <a class="btn btn-primary btn-md" onclick="myFunction5()" id="e" style="padding: 20px; margin:20px;">BAJA MEMBERS</a>
-
-            </div>
+            
 
             <div id="team" class="section scrollspy" style="background-color:">
 
